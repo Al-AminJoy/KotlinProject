@@ -1,9 +1,15 @@
 fun main() {
-var person=Person();
-   // person.firstName;
-   // person.secondName;
-  //  person.nickName="Nickname";
-   // println(person.nickName);
-    person.check();
+    //var provider=FancyInfoProvider();
+    var provider= object :PersonInfoProvider{
+        override var providerInfo: String
+            get() = "New Provider"
+            set(value) {}
 
+    }
+
+    provider.personInfo(Person());
+   // provider.getSessionId();
+  //  println(provider.getSessionId());
+    //var person=Person()
+    //person.nickName
 }
